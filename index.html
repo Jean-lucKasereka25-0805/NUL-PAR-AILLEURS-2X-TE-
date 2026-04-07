@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes(jordan) </title>
+    <style>
+        /* 4. Background Styling & 10. Aesthetics */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* 6. Menu Bar (At least 5 items) */
+        nav {
+            background-color: #000;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li { margin: 0 20px; }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* 12. Container Styling & 1. Two Columns */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Aesthetics */
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two Columns */
+            gap: 30px;
+        }
+
+        header {
+            grid-column: span 2;
+            text-align: center;
+            border-bottom: 3px solid #be0000;
+            padding-bottom: 10px;
+        }
+
+        /* 2. Images & Videos in Containers */
+        .media-box {
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* 3. Full length Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            grid-column: span 2;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background-color: #be0000; color: white; }
+
+        /* 5. Nested Lists */
+        .nested-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #be0000;
+        }
+
+        /* 11. Footer */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            grid-column: span 2;
+        }
+
+        /* 9. Added Features (Hover effect) */
+        .buy-btn {
+            background: #be0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .buy-btn:hover { transform: scale(1.1); }
+
+        /* Responsive Fix for Columns */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            header, table, footer { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#tech">Technology</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Air Jordan: The Ultimate Collection</h1>
+            <p>Experience the legacy of greatness.</p>
+        </header>
+
+        <div>
+            <h3>The Heritage</h3>
+            <p>The Air Jordan line began in 1984, changing the landscape of basketball footwear forever. It represented a bold move by Nike to sign a rookie named Michael Jordan.</p>
+            <p>Every release tells a story of a specific moment in sports history, from the "Banned" 1s to the championship-winning 11s.</p>
+            
+            <div class="media-box">
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500" alt="Jordan 1">
+                <p>Air Jordan 1 Retro High</p>
+            </div>
+
+            <p>The design philosophy blends high performance with street-ready aesthetics. This is why Jordans remain popular decades later.</p>
+            <p>Collectors, often called "sneakerheads," hunt for rare colorways and limited collaborations that can sell for thousands of dollars.</p>
+            <p>Today, the brand has expanded beyond basketball into football, soccer, and high-fashion partnerships with brands like Dior.</p>
+        </div>
+
+        <div>
+            <h3>Top Categories</h3>
+            <ul class="nested-list">
+                <li>Retro Line
+                    <ul>
+                        <li>Air Jordan 1 (The Icon)</li>
+                        <li>Air Jordan 3 (First Elephant Print)</li>
+                        <li>Air Jordan 4 (Flight Series)</li>
+                        <li>Air Jordan 11 (Patent Leather)</li>
+                        <li>Air Jordan 13 (Black Cat)</li>
+                    </ul>
+                </li>
+                <li>Performance Models</li>
+                <li>Lifestyle Apparel</li>
+            </ul>
+
+            <div class="media-box">
+                <h3>Commercial Spotlight</h3>
+                <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <button class="buy-btn">Exclusive Drop Notification</button>
+        </div>
+
+        <h3>Release Calendar</h3>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Colorway</th>
+                <th>Release Date</th>
+            </tr>
+            <tr>
+                <td>Jordan 1</td>
+                <td>Chicago</td>
+                <td>October 2025</td>
+            </tr>
+            <tr>
+                <td>Jordan 11</td>
+                <td>Cool Grey</td>
+                <td>December 2025</td>
+            </tr>
+        </table>
+
+        <h3>Price Comparison</h3>
+        <table>
+            <tr>
+                <th>Edition</th>
+                <th>Retail Price</th>
+                <th>Resell Value</th>
+            </tr>
+            <tr>
+                <td>Standard Retro</td>
+                <td>$190</td>
+                <td>$250+</td>
+            </tr>
+            <tr>
+                <td>Collaboration</td>
+                <td>$225</td>
+                <td>$600+</td>
+            </tr>
+        </table>
+
+        <footer>
+            <p>&copy; 2026 Jordan Fan Site | Designed for Final Project</p>
+            <p>Nairobi, Kenya | Week 11 Submission</p>
+        </footer>
+    </div>
+
+    </body>
+</html>
