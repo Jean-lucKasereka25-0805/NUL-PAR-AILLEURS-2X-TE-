@@ -1,214 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Official | Professional Series</title>
-    <style>
-        /* 4. Background & 10. Aesthetics */
-        :root {
-            --jordan-red: #be0000;
-            --dark-grey: #1a1a1a;
-            --light-grey: #f8f8f8;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan</title>
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            margin: 0;
-            background: var(--light-grey);
-            color: #333;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        /* 6. Menubar (5 items) */
-        nav {
-            background: #000;
-            padding: 1.2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a { color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        nav a:hover { color: var(--jordan-red); }
+body{
+    background: linear-gradient(to right,#111,#1f1f1f);
+    color:white;
+}
 
-        /* 12. Container Styling */
-        .main-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            background: white;
-            padding: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            border-radius: 8px;
-        }
+/* MENU BAR */
+nav{
+    background:#000;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
 
-        /* 1. Two Column Layout */
-        .section-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 50px;
-        }
+nav ul{
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+}
 
-        /* 2. Media Containers (Professional Styling) */
-        .media-card {
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-        .media-card p { font-size: 0.8rem; color: #777; margin-top: 8px; font-style: italic; }
-        img, video { width: 100%; border-radius: 2px; transition: 0.3s; }
-        img:hover { filter: grayscale(50%); }
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        /* 3. Full Length Tables */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 40px 0;
-        }
-        .data-table th { background: #000; color: white; padding: 15px; text-align: left; }
-        .data-table td { padding: 15px; border-bottom: 1px solid #ddd; }
+nav ul li a:hover{
+    color:#ff3c00;
+}
 
-        /* 5. Nested Lists */
-        .specs ul li { font-weight: bold; margin-top: 15px; }
-        .specs ul li ul li { font-weight: normal; color: #555; margin-top: 0; }
+/* CONTAINER */
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
 
-        /* 11. Footer */
-        footer {
-            background: #000;
-            color: #666;
-            text-align: center;
-            padding: 40px;
-            margin-top: 60px;
-        }
+/* TWO COLUMNS */
+.columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
 
-        h1, h2, h3 { text-transform: uppercase; letter-spacing: 2px; border-left: 5px solid var(--jordan-red); padding-left: 15px; }
+.card{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
 
-        /* Responsive Mobile */
-        @media (max-width: 768px) { .section-grid { grid-template-columns: 1fr; } }
-    </style>
+/* IMAGES */
+.images{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.images img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* VIDEOS */
+.videos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.videos iframe{
+    width:100%;
+    height:200px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table,th,td{
+    border:1px solid white;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <div style="color:white; font-weight:900; font-size:1.2rem;">JORDAN.CO</div>
-        <div style="display:flex; gap:20px;">
-            <a href="#">Shop</a>
-            <a href="#">Launch</a>
-            <a href="#">About</a>
-            <a href="#">Tech</a>
-            <a href="#">Support</a>
-        </div>
-    </nav>
+<!-- MENU -->
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#stats">Stats</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-    <div class="main-container">
-        <header style="text-align:center; margin-bottom: 60px;">
-            <h1 style="border:none;">The Jordan Collection 2026</h1>
-            <p>Welcome to the ultimate digital archive of the Air Jordan legacy.</p>
-            <p>This site showcases the fusion of professional sport technology and urban high-fashion.</p>
-        </header>
+<!-- HOME -->
+<section id="home" class="container">
+<h1>Jordan</h1>
 
-        <div class="section-grid">
-            <div>
-                <h3>Visual Gallery (5 Images)</h3>
-                
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500" alt="AJ1">
-                    <p>Image 1: The Original Jordan 1 Silhouette</p>
-                </div>
+<div class="columns">
+<div class="card">
+<h2>Welcome</h2>
+<p>Michael Jordan is widely regarded as the greatest basketball player of all time. His influence on sports, fashion and culture is unmatched.</p>
+<p>Jordan dominated the NBA during the 1990s with the Chicago Bulls, winning six championships.</p>
+<p>His competitive spirit and work ethic inspired millions of athletes worldwide.</p>
+<p>The Air Jordan brand became one of the most successful sneaker lines ever created.</p>
+<p>Today, Jordan remains a global icon and business leader.</p>
+</div>
 
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=500" alt="AJ4">
-                    <p>Image 2: Jordan 4 Retro Performance Edition</p>
-                </div>
+<div class="card">
+<h2>Nested List</h2>
+<ul>
+<li>Career
+    <ul>
+        <li>College</li>
+        <li>NBA Draft</li>
+        <li>Championships</li>
+    </ul>
+</li>
+<li>Awards</li>
+<li>Sneakers
+    <ul>
+        <li>Air Jordan 1</li>
+        <li>Air Jordan 4</li>
+    </ul>
+</li>
+<li>Legacy</li>
+<li>Business</li>
+</ul>
+</div>
+</div>
+</section>
 
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500" alt="AJ11">
-                    <p>Image 3: Luxury Materials & Patent Leather</p>
-                </div>
+<!-- ABOUT -->
+<section id="about" class="container">
+<h2>About Jordan</h2>
+<div class="columns">
+<div class="card">
+<p>Jordan played for the Chicago Bulls and Washington Wizards.</p>
+<p>He won 5 MVP awards and 6 Finals MVP awards.</p>
+<p>He scored 32,292 career points.</p>
+<p>Jordan revolutionized basketball marketing.</p>
+<p>He is also the owner of an NBA franchise.</p>
+</div>
 
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="Modern">
-                    <p>Image 4: Modern Design Philosophy</p>
-                </div>
+<div class="card">
+<h3>Achievements Table</h3>
+<table>
+<tr>
+<th>Year</th>
+<th>Achievement</th>
+</tr>
+<tr>
+<td>1991</td>
+<td>NBA Champion</td>
+</tr>
+<tr>
+<td>1992</td>
+<td>Olympic Gold</td>
+</tr>
+<tr>
+<td>1993</td>
+<td>3-Peat</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>72-10 Season</td>
+</tr>
+</table>
+</div>
+</div>
+</section>
 
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500" alt="Lifestyle">
-                    <p>Image 5: The Lifestyle Collection</p>
-                </div>
+<!-- GALLERY -->
+<section id="gallery" class="container">
+<h2>Images</h2>
+<div class="images">
+<img src="https://picsum.photos/300?1">
+<img src="https://picsum.photos/300?2">
+<img src="https://picsum.photos/300?3">
+<img src="https://picsum.photos/300?4">
+<img src="https://picsum.photos/300?5">
+</div>
 
-                <p>The history of this brand is built on a foundation of excellence and risk-taking.</p>
-                <p>From the basketball court to the global stage, every release tells a unique story.</p>
-            </div>
+<h2>Videos</h2>
+<div class="videos">
+<iframe src="https://www.youtube.com/embed/LAr6oAKieHk"></iframe>
+<iframe src="https://www.youtube.com/embed/1O3u7ZcK3_Q"></iframe>
+<iframe src="https://www.youtube.com/embed/SUo8skGvl-Q"></iframe>
+<iframe src="https://www.youtube.com/embed/2-4zpu0eW8A"></iframe>
+<iframe src="https://www.youtube.com/embed/XbtmGKif7Ck"></iframe>
+</div>
+</section>
 
-            <div>
-                <h3>Brand Motion (5 Videos)</h3>
+<!-- STATS -->
+<section id="stats" class="container">
+<h2>Statistics</h2>
 
-                <div class="media-card">
-                    <video controls muted><source src=<iframe width="560" height="315" src="https://www.youtube.com/embed/KN-cz7hvrJ4?si=5_lPJMxiPRQugo23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" type="video/mp4"></video>
-                    <p>Video 1: Commercial Spotlight</p>
-                </div>
+<table>
+<tr>
+<th>Season</th>
+<th>Points</th>
+<th>Rebounds</th>
+<th>Assists</th>
+</tr>
+<tr>
+<td>1991</td>
+<td>31.5</td>
+<td>6.0</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>1992</td>
+<td>30.1</td>
+<td>6.4</td>
+<td>6.1</td>
+</tr>
+<tr>
+<td>1993</td>
+<td>32.6</td>
+<td>6.7</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>30.4</td>
+<td>6.6</td>
+<td>4.3</td>
+</tr>
+</table>
+</section>
 
-                <div class="media-card">
-                    <video controls muted><source src="https://www.w3schools.com/html/mov_bbb.mp4#t=5" type="video/mp4"></video>
-                    <p>Video 2: Flight Technology Showcase</p>
-                </div>
+<!-- CONTACT -->
+<section id="contact" class="container">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: jordan@legend.com</p>
+<p>Location: USA</p>
+<p>Brand: Air Jordan</p>
+</div>
+</section>
 
-                <div class="media-card">
-                    <video controls muted><source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4"></video>
-                    <p>Video 3: Behind the Design</p>
-                </div>
-
-                <div class="media-card">
-                    <video controls muted><source src="https://www.w3schools.com/html/movie.mp4#t=2" type="video/mp4"></video>
-                    <p>Video 4: Professional Training Drills</p>
-                </div>
-
-                <div class="media-card">
-                    <video controls muted><source src="https://www.w3schools.com/html/mov_bbb.mp4#t=10" type="video/mp4"></video>
-                    <p>Video 5: Brand Identity Animation</p>
-                </div>
-
-                <div class="specs">
-                    <h3>Shoe Components</h3>
-                    <ul>
-                        <li>Upper Construction
-                            <ul>
-                                <li>Genuine Suede Overlay</li>
-                                <li>Breathable Mesh Windows</li>
-                                <li>Reinforced Lacing System</li>
-                                <li>Padded Collar support</li>
-                                <li>Iconic Jumpman Embroidery</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h3>Global Launch Calendar</h3>
-        <table class="data-table">
-            <tr><th>Region</th><th>Stock Status</th><th>Date</th></tr>
-            <tr><td>Nairobi</td><td>In Stock</td><td>April 2026</td></tr>
-            <tr><td>New York</td><td>Sold Out</td><td>March 2026</td></tr>
-            <tr><td>Tokyo</td><td>Pre-Order</td><td>May 2026</td></tr>
-        </table>
-
-        <h3>Product Authentication</h3>
-        <table class="data-table">
-            <tr><th>Feature</th><th>Retail Spec</th><th>Verified</th></tr>
-            <tr><td>Stitching</td><td>Double-Threaded</td><td>Yes</td></tr>
-            <tr><td>Logo</td><td>High-Density Heat Press</td><td>Yes</td></tr>
-        </table>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 JORDAN FINAL PROJECT | Mr chill</p>
-        <p>Built with HTML5, CSS3, and Professional Design Standards.</p>
-    </footer>
+<footer>
+<p>Jordan Final Project © 2026</p>
+</footer>
 
 </body>
 </html>
