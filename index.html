@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Official | Professional Final Project</title>
+    <title>Jordan Official | Heritage & Flight</title>
     <style>
         /* 4. Background Styling & 10. Aesthetics */
         :root {
             --jordan-red: #be0000;
-            --dark-bg: #050505;
-            --card-bg: #ffffff;
-            --text-gray: #444;
+            --dark-bg: #000000;
+            --white-card: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            background-color: #f0f0f0;
-            color: #111;
-            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
         }
 
-        /* 6. Menubar (At least 5 items) */
+        /* 6. Menubar (5 items) */
         nav {
             background: var(--dark-bg);
-            padding: 15px 5%;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid var(--jordan-red);
         }
-        .logo { color: white; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
-        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
-        nav ul li a:hover { color: var(--jordan-red); }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        .nav-links a:hover { color: var(--jordan-red); }
 
         /* 12. Container Styling */
-        .main-wrapper {
-            max-width: 1200px;
+        .main-content {
+            max-width: 1100px;
             margin: 40px auto;
-            background: var(--card-bg);
+            background: var(--white-card);
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         /* 1. At least 2 Columns */
@@ -56,309 +57,60 @@
             gap: 40px;
         }
 
-        /* 2. Images & Videos in containers */
-        .media-container {
+        /* 2. Media Containers */
+        .media-box {
             border: 1px solid #ddd;
             padding: 10px;
+            margin-bottom: 30px;
             background: #fff;
-            margin-bottom: 25px;
-            text-align: center;
-            border-bottom: 4px solid var(--jordan-red);
         }
-        img, video { width: 100%; height: auto; display: block; }
-        .media-label { font-size: 0.8rem; font-weight: bold; margin-top: 8px; color: var(--jordan-red); text-transform: uppercase; }
-
-        /* 3. Full length Tables (At least 2) */
-        .project-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
+        img { width: 100%; height: auto; display: block; }
+        
+        /* Video Aspect Ratio Fix */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
         }
-        .project-table th { background: var(--dark-bg); color: white; padding: 15px; text-align: left; }
-        .project-table td { padding: 12px; border: 1px solid #eee; }
-
-        /* 5. Nested Lists (5 items minimum) */
-        .specs-list > ul > li { font-weight: bold; margin-top: 15px; }
-        .specs-list ul ul li { font-weight: normal; color: var(--text-gray); }
-
-        /* 8. Formatted Paragraphs (At least 5) */
-        .content-text p { margin-bottom: 18px; text-align: justify; }
-
-        /* 11. Footer */
-        footer {
-            background: var(--dark-bg);
-            color: #777;
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            border-top: 5px solid var(--jordan-red);
-        }
-
-        /* 9. Added features (Button hover effects) */
-        .btn-action {
-            background: var(--jordan-red);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.4s;
-        }
-        .btn-action:hover { background: #000; letter-spacing: 2px; }
-
-        @media (max-width: 768px) { .grid-layout { grid-template-columns: 1fr; } }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo">JORDAN</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="main-wrapper">
-        <header style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 2.5rem; text-transform: uppercase;">The Jordan Legacy</h1>
-            <p>Quality and Performance Redefined</p>
-        </header>
-
-        <div class="grid-layout">
-            <div class="content-text">
-                <h3>Heritage Gallery</h3>
-                
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600" alt="Jordan 1">
-                    <div class="media-label">Image 1: The Iconic Jordan 1 High</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600" alt="Jordan 4">
-                    <div class="media-label">Image 2: Retro 4 Performance</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600" alt="Jordan 11">
-                    <div class="media-label">Image 3: Patent Leather Excellence</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600" alt="Modern Jordan">
-                    <div class="media-label">Image 4: Modern Lifestyle Series</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600" alt="Jordan 6">
-                    <div class="media-label">Image 5: Signature Tech Design</div>
-                </div>
-
-                <p>The Air Jordan brand has redefined the relationship between athletes and their footwear since its inception in 1984.</p>
-                <p>By blending basketball performance with high-street fashion, Michael Jordan created a global phenomenon that continues to dominate culture.</p>
-                <p>Each release serves as a milestone in sneaker history, celebrating specific achievements in Jordan's legendary career.</p>
-                <p>The commitment to premium materials like full-grain leather and Durabuck ensures every pair is built for durability and comfort.</p>
-                <p>Whether on the court or on the streets of Nairobi, Jordan shoes remain a symbol of flight, ambition, and greatness.</p>
-            </div>
-
-            <div>
-                <h3>Brand Motion (3 Videos)</h3>
-                
-                <div class="media-container">
-                    <video controls>
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="media-label">Video 1: Flight Series Commercial</div>
-                </div>
-
-                <div class="media-container">
-                    <video controls>
-                        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="media-label">Video 2: Behind the Craftsmanship</div>
-                </div>
-
-                <div class="media-container">
-                    <video controls>
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=10" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="media-label">Video 3: Performance Highlights</div>
-                </div>
-
-                <div class="specs-list">
-                    <h3>Technical Specifications</h3>
-                    <ul>
-                        <li>Flight Technology
-                            <ul>
-                                <li>Zoom Air Cushioning</li>
-                                <li>Carbon Fiber Shank Plates</li>
-                                <li>Phylon Midsole Units</li>
-                                <li>FlightPlate Stability</li>
-                                <li>Herringbone Traction</li>
-                            </ul>
-                        </li>
-                        <li>Premium Materials</li>
-                    </ul>
-                </div>
-
-                <button class="btn-action">Discover More Releases</button>
-            </div>
-        </div>
-
-        <h3>Product Pricing Guide</h3>
-        <table class="project-table">
-            <tr>
-                <th>Model Name</th>
-                <th>Retail Price</th>
-                <th>Availability</th>
-            </tr>
-            <tr>
-                <td>Jordan 1 Retro</td>
-                <td>$180</td>
-                <td>Limited Stock</td>
-            </tr>
-            <tr>
-                <td>Jordan 11 Concord</td>
-                <td>$220</td>
-                <td>Sold Out</td>
-            </tr>
-        </table>
-
-        <h3>Local Distribution</h3>
-        <table class="project-table">
-            <tr>
-                <th>Region</th>
-                <th>Official Retailer</th>
-                <th>Shipping Time</th>
-            </tr>
-            <tr>
-                <td>East Africa</td>
-                <td>Nairobi Flagship Store</td>
-                <td>2-3 Days</td>
-            </tr>
-        </table>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Jordan Brand Project | Information Technology Diploma Submission</p>
-        <p>Built for Week 11 Final Project | Nairobi, Kenya</p>
-    </footer>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Official | Professional Final Project</title>
-    <style>
-        /* 4. Background Styling & 10. Aesthetics */
-        :root {
-            --jordan-red: #be0000;
-            --dark-bg: #050505;
-            --card-bg: #ffffff;
-            --text-gray: #444;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #111;
-            line-height: 1.6;
-        }
-
-        /* 6. Menubar (At least 5 items) */
-        nav {
-            background: var(--dark-bg);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
+        .video-wrapper iframe {
+            position: absolute;
             top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--jordan-red);
-        }
-        .logo { color: white; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
-        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
-        nav ul li a:hover { color: var(--jordan-red); }
-
-        /* 12. Container Styling */
-        .main-wrapper {
-            max-width: 1200px;
-            margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 4px;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
-        /* 1. At least 2 Columns */
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        /* 2. Images & Videos in containers */
-        .media-container {
-            border: 1px solid #ddd;
-            padding: 10px;
-            background: #fff;
-            margin-bottom: 25px;
-            text-align: center;
-            border-bottom: 4px solid var(--jordan-red);
-        }
-        img, video { width: 100%; height: auto; display: block; }
-        .media-label { font-size: 0.8rem; font-weight: bold; margin-top: 8px; color: var(--jordan-red); text-transform: uppercase; }
-
-        /* 3. Full length Tables (At least 2) */
-        .project-table {
+        /* 3. Full length Tables */
+        .full-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 30px 0;
+            margin: 20px 0;
         }
-        .project-table th { background: var(--dark-bg); color: white; padding: 15px; text-align: left; }
-        .project-table td { padding: 12px; border: 1px solid #eee; }
-
-        /* 5. Nested Lists (5 items minimum) */
-        .specs-list > ul > li { font-weight: bold; margin-top: 15px; }
-        .specs-list ul ul li { font-weight: normal; color: var(--text-gray); }
-
-        /* 8. Formatted Paragraphs (At least 5) */
-        .content-text p { margin-bottom: 18px; text-align: justify; }
+        .full-table th { background: var(--dark-bg); color: white; padding: 12px; text-align: left; }
+        .full-table td { padding: 10px; border-bottom: 1px solid #eee; }
 
         /* 11. Footer */
         footer {
             background: var(--dark-bg);
-            color: #777;
+            color: #888;
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-            border-top: 5px solid var(--jordan-red);
         }
 
-        /* 9. Added features (Button hover effects) */
-        .btn-action {
+        /* 9. Added Features */
+        .btn {
             background: var(--jordan-red);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 24px;
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
             font-weight: bold;
-            transition: 0.4s;
+            transition: 0.3s;
         }
-        .btn-action:hover { background: #000; letter-spacing: 2px; }
+        .btn:hover { background: #333; }
 
         @media (max-width: 768px) { .grid-layout { grid-template-columns: 1fr; } }
     </style>
@@ -366,139 +118,100 @@
 <body>
 
     <nav>
-        <div class="logo">JORDAN</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div style="color:white; font-weight:900; font-size:1.4rem;">JORDAN</div>
+        <div class="nav-links">
+            <a href="#">New Releases</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Sale</a>
+        </div>
     </nav>
 
-    <div class="main-wrapper">
-        <header style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 2.5rem; text-transform: uppercase;">The Jordan Legacy</h1>
-            <p>Quality and Performance Redefined</p>
+    <div class="main-content">
+        <header style="text-align: center; border-bottom: 3px solid var(--jordan-red); margin-bottom: 40px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 10px;">JORDAN HERITAGE</h1>
+            <p>Driven by performance. Inspired by a legend.</p>
         </header>
 
         <div class="grid-layout">
-            <div class="content-text">
-                <h3>Heritage Gallery</h3>
+            <div>
+                <h3>Legacy Gallery</h3>
                 
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600" alt="Jordan 1">
-                    <div class="media-label">Image 1: The Iconic Jordan 1 High</div>
-                </div>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500" alt="Image 1"></div>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=500" alt="Image 2"></div>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500" alt="Image 3"></div>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="Image 4"></div>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500" alt="Image 5"></div>
 
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600" alt="Jordan 4">
-                    <div class="media-label">Image 2: Retro 4 Performance</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600" alt="Jordan 11">
-                    <div class="media-label">Image 3: Patent Leather Excellence</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600" alt="Modern Jordan">
-                    <div class="media-label">Image 4: Modern Lifestyle Series</div>
-                </div>
-
-                <div class="media-container">
-                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600" alt="Jordan 6">
-                    <div class="media-label">Image 5: Signature Tech Design</div>
-                </div>
-
-                <p>The Air Jordan brand has redefined the relationship between athletes and their footwear since its inception in 1984.</p>
-                <p>By blending basketball performance with high-street fashion, Michael Jordan created a global phenomenon that continues to dominate culture.</p>
-                <p>Each release serves as a milestone in sneaker history, celebrating specific achievements in Jordan's legendary career.</p>
-                <p>The commitment to premium materials like full-grain leather and Durabuck ensures every pair is built for durability and comfort.</p>
-                <p>Whether on the court or on the streets of Nairobi, Jordan shoes remain a symbol of flight, ambition, and greatness.</p>
+                <p>Air Jordan is more than just a shoe; it is a cultural movement that began in 1984.</p>
+                <p>The brand was built on the incredible athletic feats of Michael Jordan during his NBA career.</p>
+                <p>Designers like Tinker Hatfield revolutionized the industry by adding visible Air units and exotic prints.</p>
+                <p>Today, Jordan Brand continues to lead the market in both performance basketball and luxury lifestyle.</p>
+                <p>From the "Banned" 1s to the sleek 11s, every pair carries a piece of sports history.</p>
             </div>
 
             <div>
-                <h3>Brand Motion (3 Videos)</h3>
-                
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="media-label">Video 1: Flight Series Commercial</div>
+                <h3>Flight in Motion</h3>
+
+                <div class="media-box">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align: center; font-weight: bold;">Video 1: Official Showcase</p>
                 </div>
 
-                <div class="media-container">
-                    <video controls>
-                        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="media-label">Video 2: Behind the Craftsmanship</div>
+                <div class="media-box">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align: center; font-weight: bold;">Video 2: Performance Review</p>
                 </div>
 
-                <div class="media-container">
-                    <video controls>
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=10" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="media-label">Video 3: Performance Highlights</div>
+                <div class="media-box">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align: center; font-weight: bold;">Video 3: Design Inspiration</p>
                 </div>
 
-                <div class="specs-list">
-                    <h3>Technical Specifications</h3>
+                <div style="background: #f9f9f9; padding: 20px; border-left: 5px solid var(--jordan-red);">
+                    <h3>Shoe Components</h3>
                     <ul>
-                        <li>Flight Technology
+                        <li>Outer Design
                             <ul>
-                                <li>Zoom Air Cushioning</li>
-                                <li>Carbon Fiber Shank Plates</li>
-                                <li>Phylon Midsole Units</li>
-                                <li>FlightPlate Stability</li>
-                                <li>Herringbone Traction</li>
+                                <li>Premium Leather Finish</li>
+                                <li>Embroidered Jumpman Logo</li>
+                                <li>Reinforced Lacing</li>
+                                <li>Perforated Toe Box</li>
+                                <li>Heel Pull Tabs</li>
                             </ul>
                         </li>
-                        <li>Premium Materials</li>
                     </ul>
                 </div>
 
-                <button class="btn-action">Discover More Releases</button>
+                <br>
+                <button class="btn">Explore Shop</button>
             </div>
         </div>
 
-        <h3>Product Pricing Guide</h3>
-        <table class="project-table">
-            <tr>
-                <th>Model Name</th>
-                <th>Retail Price</th>
-                <th>Availability</th>
-            </tr>
-            <tr>
-                <td>Jordan 1 Retro</td>
-                <td>$180</td>
-                <td>Limited Stock</td>
-            </tr>
-            <tr>
-                <td>Jordan 11 Concord</td>
-                <td>$220</td>
-                <td>Sold Out</td>
-            </tr>
+        <h3>Release Calendar</h3>
+        <table class="full-table">
+            <tr><th>Model</th><th>Colorway</th><th>Price</th></tr>
+            <tr><td>Jordan 4</td><td>Bred Reimagined</td><td>$215</td></tr>
+            <tr><td>Jordan 1</td><td>Lost and Found</td><td>$180</td></tr>
         </table>
 
-        <h3>Local Distribution</h3>
-        <table class="project-table">
-            <tr>
-                <th>Region</th>
-                <th>Official Retailer</th>
-                <th>Shipping Time</th>
-            </tr>
-            <tr>
-                <td>East Africa</td>
-                <td>Nairobi Flagship Store</td>
-                <td>2-3 Days</td>
-            </tr>
+        <h3>Store Availability</h3>
+        <table class="full-table">
+            <tr><th>Location</th><th>Status</th><th>Region</th></tr>
+            <tr><td>Nairobi Central</td><td>In Stock</td><td>Kenya</td></tr>
         </table>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 Jordan Brand Project | Information Technology Diploma Submission</p>
-        <p>Built for Week 11 Final Project | Nairobi, Kenya</p>
+        <p>&copy; 2026 Jordan Brand Portfolio | Information Technology Final Project</p>
+        <p>GitHub Repository: Shoes-Jordan-Final</p>
     </footer>
 
 </body>
