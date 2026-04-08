@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Air Jordan</title>
+<title>Shoes Air Jordan</title>
 
 <style>
 *{
@@ -14,15 +14,17 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:linear-gradient(to right,#111,#222);
+background:linear-gradient(to right,#0f0f0f,#1c1c1c);
 color:white;
 }
 
+/* MENU */
 nav{
 background:black;
-padding:15px;
+padding:18px;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 nav ul{
@@ -35,6 +37,7 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+font-size:18px;
 }
 
 nav a:hover{
@@ -44,47 +47,61 @@ color:#ff3c00;
 .container{
 width:90%;
 margin:auto;
-padding:20px;
+padding:30px 0;
 }
 
 .columns{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:#1a1a1a;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,0.6);
 }
 
+/* IMAGES */
 .images{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:20px;
 }
 
 .images img{
 width:100%;
-border-radius:10px;
+height:260px;
+object-fit:cover;
+border-radius:12px;
+transition:0.4s;
 }
 
+.images img:hover{
+transform:scale(1.05);
+}
+
+/* VIDEOS */
 .videos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:25px;
+margin-top:20px;
 }
 
 .videos iframe{
 width:100%;
-height:200px;
+height:240px;
+border-radius:12px;
 }
 
+/* TABLE */
 table{
 width:100%;
 border-collapse:collapse;
-margin-top:15px;
+margin-top:20px;
 }
 
 table,th,td{
@@ -92,15 +109,15 @@ border:1px solid white;
 }
 
 th,td{
-padding:10px;
+padding:12px;
 text-align:center;
 }
 
 footer{
 background:black;
 text-align:center;
-padding:20px;
-margin-top:30px;
+padding:25px;
+margin-top:40px;
 }
 </style>
 </head>
@@ -122,11 +139,11 @@ margin-top:30px;
 
 <div class="columns">
 <div class="card">
-<p>Air Jordan shoes are among the most popular sneakers in the world.</p>
-<p>They were created in collaboration with Nike and Michael Jordan.</p>
-<p>The brand changed sneaker culture forever.</p>
-<p>Collectors value limited editions.</p>
-<p>Air Jordans combine performance and fashion.</p>
+<p>Air Jordan shoes are among the most iconic sneakers ever made.</p>
+<p>They combine performance, comfort, and fashion.</p>
+<p>Collectors around the world love limited releases.</p>
+<p>Each model tells a unique story.</p>
+<p>The brand remains one of the biggest in sneaker culture.</p>
 </div>
 
 <div class="card">
@@ -148,52 +165,28 @@ margin-top:30px;
 </div>
 </section>
 
-<section id="about" class="container">
-<div class="columns">
-<div class="card">
-<h3>About Air Jordan</h3>
-<p>Air Jordan launched in 1985.</p>
-<p>The sneakers are known for their design.</p>
-<p>They are worn by athletes and fans.</p>
-<p>Many colorways exist.</p>
-<p>The brand continues to grow worldwide.</p>
-</div>
-
-<div class="card">
-<h3>Release Table</h3>
-<table>
-<tr><th>Model</th><th>Year</th></tr>
-<tr><td>Jordan 1</td><td>1985</td></tr>
-<tr><td>Jordan 3</td><td>1988</td></tr>
-<tr><td>Jordan 4</td><td>1989</td></tr>
-<tr><td>Jordan 11</td><td>1995</td></tr>
-</table>
-</div>
-</div>
-</section>
-
 <section id="gallery" class="container">
 <h2>Air Jordan Images</h2>
 <div class="images">
-<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
 <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5">
-<img src="https://images.unsplash.com/photo-1584735175097-719d848f8449">
 <img src="https://images.unsplash.com/photo-1528701800489-20be3c8e6b2d">
+<img src="https://images.unsplash.com/photo-1584735175097-719d848f8449">
 <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28">
 </div>
 
 <h2>Air Jordan Videos</h2>
 <div class="videos">
-<iframe src="https://www.youtube.com/embed/bQ0tTz0p1Ew"></iframe>
-<iframe src="https://www.youtube.com/embed/0f9v5yU4f8E"></iframe>
-<iframe src="https://www.youtube.com/embed/XbtmGKif7Ck"></iframe>
-<iframe src="https://www.youtube.com/embed/2-4zpu0eW8A"></iframe>
-<iframe src="https://www.youtube.com/embed/1O3u7ZcK3_Q"></iframe>
+<iframe src="https://www.youtube.com/embed/XbtmGKif7Ck" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/2-4zpu0eW8A" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/1O3u7ZcK3_Q" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/bQ0tTz0p1Ew" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/0f9v5yU4f8E" allowfullscreen></iframe>
 </div>
 </section>
 
 <section id="table" class="container">
-<h2>Price Table</h2>
+<h2>Air Jordan Table</h2>
 <table>
 <tr>
 <th>Model</th>
